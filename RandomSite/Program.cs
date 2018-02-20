@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using RandomSite.Core;
 
 namespace RandomSite
 {
@@ -14,6 +15,7 @@ namespace RandomSite
     {
         public static void Main(string[] args)
         {
+            var reader = new JSONFileReader();
             BuildWebHost(args).Run();
         }
 

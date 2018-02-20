@@ -10,6 +10,7 @@ namespace RandomSite.Models
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string ImageUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string BrandName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string BrandUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int PriceInPennies { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int QuantityInStock { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -17,7 +18,5 @@ namespace RandomSite.Models
         //unique fields
         public List<string> SizesOffered { get; set; }
         public List<string> ColorsOffered { get; set; }
-
-
     }
 }
