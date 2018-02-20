@@ -1,22 +1,32 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace RandomSite.Models
 {
-    public class ClothingItemModel : IShoppableItemModel
+    public class ClothingItemModel// : IShoppableItemModel
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string ImageUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string BrandName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string BrandUrl { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int PriceInPennies { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int QuantityInStock { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [JsonProperty("name")]
+        public string Name { get; set; }
+        [JsonProperty("description")]
+        public string Description { get; set; }
+        [JsonProperty("imageUrl")]
+        public string ImageUrl { get; set; }
+        [JsonProperty("brandName")]
+        public string BrandName { get; set; }
+        [JsonProperty("brandUrl")]
+        public string BrandUrl { get; set; }
+        [JsonProperty("priceInPennies")]
+        public int PriceInPennies { get; set; }
+        [JsonProperty("quantityInStock")]
+        public int QuantityInStock { get; set; }
 
         //unique fields
+        [JsonProperty("sizesOffered")]
         public List<string> SizesOffered { get; set; }
+        [JsonProperty("colorsOffered")]
         public List<string> ColorsOffered { get; set; }
     }
 }
