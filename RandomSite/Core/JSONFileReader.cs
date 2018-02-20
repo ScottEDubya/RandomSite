@@ -9,12 +9,12 @@ namespace RandomSite.Core
 {
     public class JSONFileReader
     {
-        public JSONFileReader()
+        public JSONFileReader() { }
+        public TObject ReadFile<TObject>(string filename)
         {
-            var text = System.IO.File.ReadAllText(Path.Combine(Environment.CurrentDirectory, "TestData.json"));
+            var text = System.IO.File.ReadAllText(Path.Combine(Environment.CurrentDirectory, filename));
             var jsonSerializationHelper = new JSONSerializationHelper();
-            var clothingModel = jsonSerializationHelper.GetObjectFromString<ClothingItemModel>(text);
-            Console.WriteLine("JSON file output: {0}", clothingModel.Name);
+            return jsonSerializationHelper.GetObjectFromString<TObject>(text);
         }
     }
 }

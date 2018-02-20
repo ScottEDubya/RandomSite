@@ -15,7 +15,6 @@ namespace RandomSite
     {
         public static void Main(string[] args)
         {
-            var reader = new JSONFileReader();
             BuildWebHost(args).Run();
         }
 

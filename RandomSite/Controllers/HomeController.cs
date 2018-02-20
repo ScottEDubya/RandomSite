@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RandomSite.Models;
+using RandomSite.Core;
 
 namespace RandomSite.Controllers
 {
@@ -12,7 +13,9 @@ namespace RandomSite.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var reader = new JSONFileReader();
+            var clothingModel = reader.ReadFile<ClothingItemModel>("TestData.json");
+            return View(clothingModel);
         }
 
         public IActionResult About()
