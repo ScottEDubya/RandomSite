@@ -1,6 +1,8 @@
 ###################
 # compiled source #
 ###################
+RandomSite/bin/
+RandomSite/obj/Debug
 *.com
 *.class
 *.dll
