@@ -2,7 +2,7 @@
 # compiled source #
 ###################
 RandomSite/bin/
-RandomSite/obj/Debug
+#RandomSite/obj/
 *.com
 *.class
 *.dll
