@@ -18,6 +18,13 @@ namespace RandomSite.Controllers
             return View(clothingModel);
         }
 
+        public IActionResult Products(string id)
+        {
+            var reader = new JSONFileReader();
+            var clothingModel = reader.ReadFile<ClothingItemModel>("TestData.json");
+            return View("product", clothingModel);
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

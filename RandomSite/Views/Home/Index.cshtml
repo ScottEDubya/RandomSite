@@ -1,17 +1,31 @@
 ﻿@model RandomSite.Models.ClothingItemModel
 
+
 <div id="scotts-app">
-    <p>@Model.Name</p>
-    <p>@Model.PriceInPennies</p>
-    <p>@Model.QuantityInStock</p>
-    <p>@Model.ImageUrl</p>
-    <p>@Model.Description</p>
-    <a href="@Model.BrandUrl">@Model.BrandName</a>
-    <hr />
-    @foreach (var size in Model.SizesOffered)
-    {<p>size: @size</p>}
-    <hr />
-    @foreach (var color in Model.ColorsOffered)
-    {<p>color: @color</p>}
+
+    <div class="row">
+        <div id="items" class="col-sm-12 col-lg-8">
+            <a href="home/products?id=@Model.Name"><p>@Model.Name</p></a>
+            <p>@Model.PriceInPennies</p>
+            <p>@Model.QuantityInStock</p>
+            <img src="@Model.ImageUrl" alt="@Model.Name"/>
+            <p>@Model.Description</p>
+            <a href="@Model.BrandUrl">@Model.BrandName</a>
+            <hr />
+            @foreach (var size in Model.SizesOffered)
+                {<p>size: @size</p>}
+            <hr />
+            @foreach (var color in Model.ColorsOffered)
+                {<p>color: @color</p>}
+        </div>
+        <div id="cart" class="col-sm-12 col-lg-4">
+            <h5>Count: 1</h5>
+            <blockquote>lorem ipsum blahblahblah here's some
+            more words to tickle your fancy. I'm testing out
+            the capability of using columns provided by
+            bootstrap.</blockquote>
+        </div>
+    </div>
+    
 
 </div>

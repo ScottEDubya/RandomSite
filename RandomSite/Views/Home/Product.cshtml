@@ -1,0 +1,16 @@
+﻿@model RandomSite.Models.ClothingItemModel
+
+<div id="solo-product-view">
+    <p>@Model.Name</p>
+    <p>@Model.PriceInPennies</p>
+    <p>@Model.QuantityInStock</p>
+    <img src="@Model.ImageUrl" alt="@Model.Name" />
+    <p>@Model.Description</p>
+    <a href="@Model.BrandUrl">@Model.BrandName</a>
+    <hr />
+    @foreach (var size in Model.SizesOffered)
+    {<p>size: @size</p>}
+    <hr />
+    @foreach (var color in Model.ColorsOffered)
+    {<p>color: @color</p>}
+</div>
